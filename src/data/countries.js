@@ -1,0 +1,40 @@
+const rows = [
+  ["JPN","jp","Japan","Tokyo","Asia","Eastern Asia",124000000,377975,"Japanese yen (¥)","Japanese","Asia/Tokyo","left",35.68,139.69,false],
+  ["FRA","fr","France","Paris","Europe","Western Europe",68000000,551695,"Euro (€)","French","Europe/Paris","right",48.86,2.35,false],
+  ["ITA","it","Italy","Rome","Europe","Southern Europe",59000000,301336,"Euro (€)","Italian","Europe/Rome","right",41.9,12.5,false],
+  ["THA","th","Thailand","Bangkok","Asia","South-Eastern Asia",71000000,513120,"Thai baht (฿)","Thai","Asia/Bangkok","left",13.75,100.5,false],
+  ["IND","in","India","New Delhi","Asia","Southern Asia",1428000000,3287263,"Indian rupee (₹)","Hindi, English","Asia/Kolkata","left",28.61,77.21,false],
+  ["USA","us","United States","Washington, D.C.","Americas","Northern America",335000000,9372610,"US dollar ($)","English","America/New_York","right",38.9,-77.04,false],
+  ["GBR","gb","United Kingdom","London","Europe","Northern Europe",67000000,242900,"Pound sterling (£)","English","Europe/London","left",51.51,-0.13,false],
+  ["DEU","de","Germany","Berlin","Europe","Western Europe",84000000,357114,"Euro (€)","German","Europe/Berlin","right",52.52,13.4,false],
+  ["ESP","es","Spain","Madrid","Europe","Southern Europe",48000000,505992,"Euro (€)","Spanish","Europe/Madrid","right",40.42,-3.7,false],
+  ["AUS","au","Australia","Canberra","Oceania","Australia and New Zealand",26000000,7692024,"Australian dollar ($)","English","Australia/Sydney","left",-35.28,149.13,false],
+  ["BRA","br","Brazil","Brasília","Americas","South America",216000000,8515767,"Brazilian real (R$)","Portuguese","America/Sao_Paulo","right",-15.79,-47.88,false],
+  ["CAN","ca","Canada","Ottawa","Americas","Northern America",40000000,9984670,"Canadian dollar ($)","English, French","America/Toronto","right",45.42,-75.7,false],
+  ["MEX","mx","Mexico","Mexico City","Americas","North America",128000000,1964375,"Mexican peso ($)","Spanish","America/Mexico_City","right",19.43,-99.13,false],
+  ["EGY","eg","Egypt","Cairo","Africa","Northern Africa",112000000,1002450,"Egyptian pound (£)","Arabic","Africa/Cairo","right",30.04,31.24,false],
+  ["ZAF","za","South Africa","Pretoria","Africa","Southern Africa",60000000,1221037,"South African rand (R)","Zulu, Xhosa, English","Africa/Johannesburg","left",-25.75,28.19,false],
+  ["ARE","ae","United Arab Emirates","Abu Dhabi","Asia","Western Asia",10000000,83600,"UAE dirham (د.إ)","Arabic","Asia/Dubai","right",24.45,54.38,false],
+  ["SGP","sg","Singapore","Singapore","Asia","South-Eastern Asia",5900000,719,"Singapore dollar ($)","English, Malay, Mandarin, Tamil","Asia/Singapore","left",1.35,103.82,false],
+  ["IDN","id","Indonesia","Jakarta","Asia","South-Eastern Asia",277000000,1904569,"Indonesian rupiah (Rp)","Indonesian","Asia/Jakarta","left",-6.2,106.85,false],
+  ["VNM","vn","Vietnam","Hanoi","Asia","South-Eastern Asia",98000000,331212,"Vietnamese dong (₫)","Vietnamese","Asia/Ho_Chi_Minh","right",21.03,105.85,false],
+  ["TUR","tr","Turkey","Ankara","Asia","Western Asia",85000000,783562,"Turkish lira (₺)","Turkish","Europe/Istanbul","right",39.93,32.86,false],
+  ["GRC","gr","Greece","Athens","Europe","Southern Europe",10400000,131990,"Euro (€)","Greek","Europe/Athens","right",37.98,23.73,false],
+  ["CHE","ch","Switzerland","Bern","Europe","Western Europe",8800000,41284,"Swiss franc (CHF)","German, French, Italian","Europe/Zurich","right",46.95,7.45,true],
+  ["NZL","nz","New Zealand","Wellington","Oceania","Australia and New Zealand",5100000,268021,"New Zealand dollar ($)","English, Māori","Pacific/Auckland","left",-41.29,174.78,false],
+  ["ARG","ar","Argentina","Buenos Aires","Americas","South America",46000000,2780400,"Argentine peso ($)","Spanish","America/Argentina/Buenos_Aires","right",-34.6,-58.38,false],
+  ["PER","pe","Peru","Lima","Americas","South America",34000000,1285216,"Peruvian sol (S/)","Spanish, Quechua","America/Lima","right",-12.05,-77.04,false],
+  ["MAR","ma","Morocco","Rabat","Africa","Northern Africa",37000000,446550,"Moroccan dirham (د.م.)","Arabic, Berber","Africa/Casablanca","right",34.02,-6.83,false],
+  ["KEN","ke","Kenya","Nairobi","Africa","Eastern Africa",55000000,580367,"Kenyan shilling (KSh)","Swahili, English","Africa/Nairobi","left",-1.29,36.82,false],
+  ["KOR","kr","South Korea","Seoul","Asia","Eastern Asia",51000000,100210,"South Korean won (₩)","Korean","Asia/Seoul","right",37.57,126.98,false],
+  ["PRT","pt","Portugal","Lisbon","Europe","Southern Europe",10300000,92090,"Euro (€)","Portuguese","Europe/Lisbon","right",38.72,-9.14,false],
+  ["NLD","nl","Netherlands","Amsterdam","Europe","Western Europe",17800000,41850,"Euro (€)","Dutch","Europe/Amsterdam","right",52.37,4.9,false],
+];
+
+export const countries = rows.map(
+  ([code, cc, name, capital, region, subregion, population, area, currency, languages, tz, side, lat, lon, landlocked]) => ({
+    code, cc, name, capital, region, subregion, population, area,
+    currency, languages, tz, side, lat, lon, landlocked,
+    flag: `https://flagcdn.com/w320/${cc}.png`,
+  })
+);
